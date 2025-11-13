@@ -1,0 +1,201 @@
+body {
+  font-family: "bc-vajgar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  /* background-color: #000; */
+}
+
+#game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-family: 'Serif';
+  overflow: hidden;
+}
+
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 10;
+}
+
+#background, #character, #story-text, #choices {
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+.fade-out {
+  opacity: 0;
+}
+.fade-in {
+  opacity: 1;
+}
+
+/* #character-container {
+  position: absolute;
+  bottom: 185px;
+  right: 45%;
+  width: 200px;
+  height: 370px; 
+  z-index: 10;
+}
+
+#character {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+} */
+
+#character-container {
+  position: absolute;
+  bottom: 185px;
+  right: 45%;
+  width: 200px;
+  height: 370px;
+  overflow: visible;
+  z-index: 10;
+}
+
+#character {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  z-index: 11;
+}
+
+#particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+
+
+#character[style*="half-man.png"] {
+  background-size: cover;
+  background-position: center bottom;
+}
+
+#character[style*="marigold.png"] {
+  background-size: contain;
+  background-position: center center;
+  transform: translateX(-20%); 
+  width: 200%;
+}
+
+#character[style*="boy.png"] {
+  background-size: cover;
+  background-position: bottom bottom;
+  transform: translateX(-20%); 
+  width: 200%;
+}
+#character[style*="oils.png"] {
+  background-size: contain;
+  background-position: bottom bottom;
+  transform: translateX(-30%); 
+  width: 320%;
+}
+#character[style*="lavender-rosemary.png"] {
+  background-size: cover;
+  background-position: bottom bottom;
+  transform: translateX(10%); 
+  width: 100%;
+}
+#character[style*="incence.png"] {
+  background-size: contain;
+  background-position: top top;
+  transform: translateX(-20%); 
+  width: 200%;
+}
+#character[style*="woman.png"] {
+  background-size: cover;
+  background-position: center bottom;
+  transform: translateX(-0%); 
+  /* width: 200%; */
+}
+#character[style*="all.png"] {
+  background-size: contain;
+  background-position: center bottom;
+  transform: translateX(-37%); 
+  width: 600%;
+}
+
+
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+#character {
+  /* animation: slideIn 0.6s ease; */
+  background-color: transparent; /* ensure transparency */
+  z-index: 10; /* above background */
+}
+
+
+#story-panel {
+  font-family: "bc-vajgar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  bottom: 85px;   
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84%;                 
+  height: 86px;          
+  /* background-color: #dca791; */
+  background-color: #C96148;
+  background-size: cover;     
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 4px solid #802D20;
+  border-radius: 4px;
+  padding: 4px;
+  color: #e1e4e0;    
+}
+
+
+#story-text {
+  position: absolute;
+  top: -10%;
+  letter-spacing: 0.05em;
+  /* right: 25%; */
+  /* padding: 20px; */
+  /* max-width: 900px; */
+  z-index: 2;
+  /* background: rgba(0, 0, 0, 0.6); */
+}
+
+#choices {
+  position: absolute;
+  bottom: 10%;
+  right: 25%;
+  z-index: 2;
+}
+
+.choice {
+  color: #802d1f;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.choice:hover {
+  color: #C4CAC3;
+}
+
+
