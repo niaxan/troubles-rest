@@ -4,6 +4,8 @@ body {
   font-style: normal;
   margin: 0;
   padding: 0;
+  width: 2048px;
+  height: 1152px;
   /* background-color: #000; */
 }
 
